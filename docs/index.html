@@ -3,152 +3,100 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SafeWAChat – Privacy for WhatsApp Web</title>
-  <meta name="description" content="SafeWAChat blurs WhatsApp Web messages until hover. Timed auto-blur, selective contacts, screen-share protection & more." />
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="SafeWAChat — Privacy-first Chrome extension that blurs WhatsApp Web messages until you hover. Timed auto-blur, selective contacts, screen-share protection." />
+  <title>SafeWAChat — Privacy for WhatsApp Web</title>
   <link rel="icon" type="image/svg+xml" href="assets/icon.svg" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="header">
+  <header class="site-header">
     <div class="container header-inner">
       <a href="index.html" class="logo">
-        <img src="assets/icon.svg" alt="SafeWAChat" width="36" height="36" />
+        <img src="assets/icon.svg" alt="SafeWAChat" width="40" height="40" />
         <span>SafeWAChat</span>
       </a>
       <nav class="nav">
         <a href="#features">Features</a>
         <a href="privacy.html">Privacy</a>
         <a href="contact.html">Contact</a>
-        <a href="https://github.com/zuhaibbutt786/whatsapp-web-privacy-extension" class="btn btn-sm" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://github.com/zuhaibbutt786/whatsapp-web-privacy-extension" class="btn btn-outline" target="_blank" rel="noopener">GitHub</a>
       </nav>
     </div>
   </header>
 
-  <section class="hero">
-    <div class="container hero-inner">
-      <div class="hero-copy">
-        <h1>Privacy for WhatsApp Web</h1>
-        <p class="lead">
-          Blur messages, previews, media and profile pictures until you hover.
-          Built for cafés, offices, presentations and shared screens.
-        </p>
-        <div class="hero-actions">
-          <a href="https://github.com/zuhaibbutt786/whatsapp-web-privacy-extension" class="btn" target="_blank" rel="noopener">View on GitHub</a>
-          <a href="#features" class="btn btn-outline">See features</a>
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1>Privacy for WhatsApp Web</h1>
+          <p class="lead">Blur messages, media, and previews until you hover. Stay private on shared screens and public spaces.</p>
+          <div class="hero-cta">
+            <a href="https://github.com/zuhaibbutt786/whatsapp-web-privacy-extension" class="btn btn-primary" target="_blank" rel="noopener">Get on GitHub</a>
+            <a href="#features" class="btn btn-ghost">See features</a>
+          </div>
         </div>
-      </div>
-      <div class="hero-visual">
-        <div class="chat-mock" id="chat-mock">
-          <div class="chat-header">
-            <div class="avatar blur-demo"></div>
-            <div class="chat-meta">
-              <div class="name blur-demo">Contact name</div>
-              <div class="status">online</div>
+        <div class="hero-visual">
+          <div class="blur-demo">
+            <div class="demo-chat">
+              <div class="demo-msg blurred">Hey, are you free later?</div>
+              <div class="demo-msg blurred">Meeting at 3pm</div>
+              <div class="demo-msg visible">Hover to reveal</div>
             </div>
           </div>
-          <div class="messages">
-            <div class="msg incoming blur-demo">Hey, are you free later?</div>
-            <div class="msg outgoing blur-demo">Yes, around 5?</div>
-            <div class="msg incoming blur-demo">Perfect. I’ll send the details.</div>
-            <div class="msg outgoing blur-demo">Sounds good 👍</div>
-          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- About / Intro -->
-  <section class="section section-alt">
-    <div class="container narrow">
-      <h2 class="section-title">About the creator</h2>
-      <div class="about">
-        <p>
-          Hi, I’m <strong>Zuhaib Hussain Butt</strong>. I build practical tools that respect your privacy
-          and stay out of the way.
-        </p>
-        <p>
-          SafeWAChat started from a simple need: keeping WhatsApp Web private when working in public places,
-          shared offices, or while presenting on a screen. The goal was never complexity — just one clear purpose:
-          <em>blur what should stay private until you decide to look</em>.
-        </p>
-        <p>
-          I believe privacy tools should be transparent, lightweight, and respectful of your data.
-          No accounts, no tracking, no cloud — everything runs locally in your browser.
-        </p>
+    <section id="features" class="features">
+      <div class="container">
+        <h2>Everything you need for private chats</h2>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <div class="feature-icon">🔒</div>
+            <h3>Blur on load</h3>
+            <p>Messages, previews, media and profile photos start blurred. Reveal only when you hover or focus.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon">⏱️</div>
+            <h3>Timed auto-blur</h3>
+            <p>Optionally re-blur content after a short delay so nothing stays visible longer than you want.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon">👤</div>
+            <h3>Selective contacts</h3>
+            <p>Choose which chats stay protected and which remain clear. Full control per conversation.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon">🖥️</div>
+            <h3>Screen-share protection</h3>
+            <p>Extra safeguards when sharing your screen so sensitive chats stay private in meetings.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon">🎨</div>
+            <h3>Blur styles</h3>
+            <p>Pick the blur intensity and style that fits your workflow and visual preference.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon">🕶️</div>
+            <h3>Incognito mode</h3>
+            <p>One-click full privacy mode. Toggle quickly with Alt+X from the keyboard.</p>
+          </article>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Features -->
-  <section id="features" class="section">
-    <div class="container">
-      <h2 class="section-title">Everything you need for privacy</h2>
-      <p class="section-sub">You decide exactly what stays hidden.</p>
-      <div class="grid features-grid">
-        <article class="card">
-          <div class="icon-wrap">💬</div>
-          <h3>Blur messages</h3>
-          <p>Every message in your open chat stays blurred until you choose to look.</p>
-        </article>
-        <article class="card">
-          <div class="icon-wrap">📋</div>
-          <h3>Hide previews</h3>
-          <p>Last-message previews in the sidebar stay private from anyone nearby.</p>
-        </article>
-        <article class="card">
-          <div class="icon-wrap">🖼️</div>
-          <h3>Media protection</h3>
-          <p>Images, videos, and stickers are blurred so sensitive content stays hidden.</p>
-        </article>
-        <article class="card">
-          <div class="icon-wrap">👤</div>
-          <h3>Profile pictures</h3>
-          <p>Avatars across the interface stay blurred for extra discretion.</p>
-        </article>
-        <article class="card">
-          <div class="icon-wrap">⏱️</div>
-          <h3>Timed Auto-Blur</h3>
-          <p>Content automatically hides again after a few seconds when you move away.</p>
-        </article>
-        <article class="card">
-          <div class="icon-wrap">🎯</div>
-          <h3>Selective contacts</h3>
-          <p>Always protect certain people or groups — or leave trusted chats open.</p>
-        </article>
-        <article class="card">
-          <div class="icon-wrap">🖥️</div>
-          <h3>Screen-share mode</h3>
-          <p>Extra protection when you’re presenting or sharing your screen.</p>
-        </article>
-        <article class="card">
-          <div class="icon-wrap">🎨</div>
-          <h3>Blur styles</h3>
-          <p>Choose soft blur, pixelation, or a solid cover — and set the strength.</p>
-        </article>
-        <article class="card">
-          <div class="icon-wrap">🕶️</div>
-          <h3>Incognito mode</h3>
-          <p>Stronger privacy that also hides unread badges and notification dots.</p>
-        </article>
+    <section class="cta-band">
+      <div class="container">
+        <h2>Ready to protect your chats?</h2>
+        <p>Install SafeWAChat and keep WhatsApp Web private on any device.</p>
+        <a href="https://github.com/zuhaibbutt786/whatsapp-web-privacy-extension" class="btn btn-primary" target="_blank" rel="noopener">View on GitHub</a>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <section class="section section-alt">
-    <div class="container narrow">
-      <h2 class="section-title">How it works</h2>
-      <ol class="steps">
-        <li>Install the extension from the Chrome Web Store (or load it unpacked from GitHub).</li>
-        <li>Open WhatsApp Web — content is blurred by default.</li>
-        <li>Hover to reveal, or use <kbd>Alt</kbd>+<kbd>X</kbd> to toggle privacy on/off.</li>
-        <li>Customize blur targets, delay, and style in the popup or options page.</li>
-      </ol>
-    </div>
-  </section>
-
-  <footer class="footer">
+  <footer class="site-footer">
     <div class="container footer-inner">
-      <p>© 2026 SafeWAChat. Built with care for your privacy.</p>
+      <p>© 2026 SafeWAChat. Built for privacy.</p>
       <div class="footer-links">
         <a href="privacy.html">Privacy Policy</a>
         <a href="contact.html">Contact</a>
