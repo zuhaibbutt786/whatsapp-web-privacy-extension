@@ -39,6 +39,7 @@
 4. Click **Load unpacked** and select this project folder
 5. Open [web.whatsapp.com](https://web.whatsapp.com) — the extension activates automatically
 
+> **Icons note:** Placeholder icons are included. Replace the PNGs in the `icons/` folder with your own designs (16/32/48/128 px) anytime. The extension functions fully even with the current placeholders.
 
 ## Usage
 
