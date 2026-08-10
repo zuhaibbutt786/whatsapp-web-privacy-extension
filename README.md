@@ -6,6 +6,8 @@
 ![Manifest](https://img.shields.io/badge/manifest-v3-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
+**Live repo:** https://github.com/zuhaibbutt786/whatsapp-web-privacy-extension
+
 ## Features
 
 ### Core Blur Options
@@ -27,20 +29,26 @@
 
 ## Installation (Developer Mode)
 
-1. Clone this repository or download the ZIP
-2. Open Chrome / Edge / Brave and go to `chrome://extensions`
-3. Enable **Developer mode**
-4. Click **Load unpacked** and select the project folder
-5. Open [web.whatsapp.com](https://web.whatsapp.com) and enjoy privacy
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/zuhaibbutt786/whatsapp-web-privacy-extension.git
+   cd whatsapp-web-privacy-extension
+   ```
+2. Open Chrome / Edge / Brave → go to `chrome://extensions`
+3. Enable **Developer mode** (top-right toggle)
+4. Click **Load unpacked** and select this project folder
+5. Open [web.whatsapp.com](https://web.whatsapp.com) — the extension activates automatically
+
+> **Icons note:** Placeholder icons are included. Replace the PNGs in the `icons/` folder with your own designs (16/32/48/128 px) anytime. The extension functions fully even with the current placeholders.
 
 ## Usage
 
 1. Click the extension icon to open the settings popup
-2. Toggle the features you need
+2. Toggle the features you want → click **Save Settings**
 3. Hover any blurred element to reveal it temporarily
 4. Press **Alt + X** anytime to instantly enable/disable all effects
 
-## Privacy
+## Privacy Promise
 
 This extension:
 - Does **not** collect any information about you or your messages
@@ -54,18 +62,13 @@ This extension:
 whatsapp-web-privacy-extension/
 ├── manifest.json
 ├── icons/
-│   ├── icon16.png
-│   ├── icon32.png
-│   ├── icon48.png
-│   └── icon128.png
 ├── src/
-│   ├── background.js
-│   ├── content.js
-│   ├── content.css
-│   ├── popup.html
-│   ├── popup.css
-│   ├── popup.js
+│   ├── background.js      # Service worker + shortcut handling
+│   ├── content.js         # Main blur logic + MutationObserver
+│   ├── content.css        # Blur styles & transitions
+│   ├── popup.html / .css / .js
 │   └── options.html
+├── LICENSE
 └── README.md
 ```
 
@@ -77,7 +80,7 @@ If something stops working after a WhatsApp update, the most common fix is updat
 
 ## License
 
-MIT
+MIT © 2026 Zuhaib Hussain Butt
 
 ---
 
