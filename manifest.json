@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Privacy Extension for WhatsApp™ Web",
+  "name": "SafeWAChat",
   "version": "1.0.0",
-  "description": "Blurs your WhatsApp Web messages and content until you hover. Perfect for privacy in public spaces. Features timed auto-blur, selective contacts, screen-share protection, blur styles, and Incognito mode.",
+  "description": "SafeWAChat – Blurs your WhatsApp Web messages and content until you hover. Privacy for public spaces: timed auto-blur, selective contacts, screen-share protection, blur styles, and Incognito mode.",
   "permissions": [
     "storage",
     "activeTab"
@@ -29,7 +29,7 @@
       "48": "icons/icon48.png",
       "128": "icons/icon128.png"
     },
-    "default_title": "WhatsApp Web Privacy"
+    "default_title": "SafeWAChat"
   },
   "icons": {
     "16": "icons/icon16.png",
