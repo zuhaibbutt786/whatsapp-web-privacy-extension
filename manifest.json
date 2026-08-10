@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "SafeWAChat",
   "version": "1.0.0",
-  "description": "SafeWAChat – Blurs your WhatsApp Web messages and content until you hover. Privacy for public spaces: timed auto-blur, selective contacts, screen-share protection, blur styles, and Incognito mode.",
+  "description": "Blurs WhatsApp Web messages until hover. Timed auto-blur, selective contacts, screen-share protection & more.",
   "permissions": [
     "storage",
     "activeTab"
@@ -15,15 +15,9 @@
   },
   "content_scripts": [
     {
-      "matches": [
-        "https://web.whatsapp.com/*"
-      ],
-      "js": [
-        "src/content.js"
-      ],
-      "css": [
-        "src/content.css"
-      ],
+      "matches": ["https://web.whatsapp.com/*"],
+      "js": ["src/content.js"],
+      "css": ["src/content.css"],
       "run_at": "document_idle"
     }
   ],
