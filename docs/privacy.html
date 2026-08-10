@@ -3,95 +3,159 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="SafeWAChat Privacy Policy — how we handle data and what the extension does and does not collect." />
-  <title>Privacy Policy — SafeWAChat</title>
+  <title>Privacy Policy – SafeWAChat</title>
+  <meta name="description" content="Privacy Policy for SafeWAChat – how we handle your data." />
+  <meta name="theme-color" content="#00a884" />
   <link rel="icon" type="image/svg+xml" href="assets/icon.svg" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="index.html" class="logo">
-        <img src="assets/icon.svg" alt="SafeWAChat" width="40" height="40" />
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand">
+        <img src="assets/icon.svg" alt="SafeWAChat" width="36" height="36" />
         <span>SafeWAChat</span>
       </a>
-      <nav class="nav">
+      <div class="nav-links">
+        <a href="index.html">Home</a>
         <a href="index.html#features">Features</a>
-        <a href="privacy.html" class="active">Privacy</a>
+        <a href="privacy.html">Privacy</a>
         <a href="contact.html">Contact</a>
-        <a href="https://github.com/zuhaibbutt786/whatsapp-web-privacy-extension" class="btn btn-outline" target="_blank" rel="noopener">GitHub</a>
-      </nav>
+      </div>
     </div>
-  </header>
+  </nav>
 
-  <main class="page-content">
-    <div class="container narrow">
-      <h1>Privacy Policy</h1>
-      <p class="muted">Last updated: August 2026</p>
+  <main class="section">
+    <div class="container narrow policy">
+      <h1 class="section-title" style="text-align:left;margin-bottom:8px;">Privacy Policy</h1>
+      <p class="muted">Last updated: August 10, 2026</p>
 
-      <section>
-        <h2>Overview</h2>
-        <p>SafeWAChat is a Chrome extension that blurs WhatsApp Web content on your device for privacy. This policy explains what the extension does with data.</p>
-      </section>
+      <h2>1. Introduction</h2>
+      <p>
+        SafeWAChat (“the Extension”, “we”, “us”) is a browser extension that blurs messages, media,
+        and related interface elements on WhatsApp Web until the user hovers over them.
+        This Privacy Policy explains what information the Extension handles and how it is treated.
+      </p>
+      <p>
+        By installing or using SafeWAChat, you agree to this Privacy Policy.
+        If you do not agree, please uninstall the Extension.
+      </p>
 
-      <section>
-        <h2>What we collect</h2>
-        <p><strong>We collect nothing.</strong> SafeWAChat does not send any data to our servers or to third parties. There is no analytics, no tracking, and no account required.</p>
-      </section>
+      <h2>2. Single purpose</h2>
+      <p>
+        SafeWAChat has a single, narrow purpose: to protect the user’s privacy on WhatsApp Web
+        by blurring chat content until the user chooses to reveal it. All features of the Extension
+        exist solely to support this purpose.
+      </p>
 
-      <section>
-        <h2>What stays on your device</h2>
-        <p>Settings (blur preferences, selective contacts, timers, and similar options) are stored only in your browser’s local storage via the Chrome storage API. This data never leaves your computer.</p>
-      </section>
+      <h2>3. Information we collect</h2>
+      <p><strong>We do not collect personal data.</strong></p>
+      <p>In particular, SafeWAChat does not collect, transmit, or store:</p>
+      <ul>
+        <li>Message content, media, or conversation history</li>
+        <li>Contact names, phone numbers, or profile information</li>
+        <li>Personally identifiable information (name, email, address, etc.)</li>
+        <li>Location, IP address, or device identifiers for tracking</li>
+        <li>Browsing history outside WhatsApp Web</li>
+        <li>Authentication credentials or payment information</li>
+        <li>Analytics, advertising identifiers, or usage telemetry sent to external servers</li>
+      </ul>
 
-      <section>
-        <h2>Permissions</h2>
-        <ul>
-          <li><strong>storage</strong> — to save your privacy settings locally.</li>
-          <li><strong>activeTab</strong> — to apply blur only on the WhatsApp Web tab when needed.</li>
-          <li><strong>host permission for web.whatsapp.com</strong> — required so the extension can inject the blur styles and scripts on WhatsApp Web.</li>
-        </ul>
-        <p>We do not request access to other sites or to your WhatsApp messages beyond what is needed to apply visual blur on the page you already have open.</p>
-      </section>
+      <h2>4. Local settings only</h2>
+      <p>
+        The Extension may store preference settings on your device using the browser’s storage API
+        (for example: which elements to blur, blur intensity, selective contact lists, and whether
+        the Extension is enabled). These settings:
+      </p>
+      <ul>
+        <li>Remain on your device (and may sync via your browser account if you use sync)</li>
+        <li>Are used only to apply your chosen privacy options</li>
+        <li>Are never sent to our servers — we operate no backend that receives this data</li>
+      </ul>
 
-      <section>
-        <h2>WhatsApp content</h2>
-        <p>The extension only changes how content is displayed in your browser (blur / unblur). It does not read, store, or transmit message text, media, or contact lists beyond the minimal processing required for the blur UI.</p>
-      </section>
+      <h2>5. How the Extension works on the page</h2>
+      <p>
+        To apply blur effects, SafeWAChat runs only on <code>https://web.whatsapp.com/*</code>.
+        It may read elements of the page (such as message containers or media) locally in your browser
+        solely to apply visual blurring. This processing happens entirely on your device.
+        No page content is uploaded, logged, or shared.
+      </p>
 
-      <section>
-        <h2>Third-party services</h2>
-        <p>SafeWAChat does not integrate with any third-party analytics, ads, or cloud services. The only external link is the optional GitHub repository for source code and updates.</p>
-      </section>
+      <h2>6. Permissions</h2>
+      <p>The Extension requests only the permissions needed for its single purpose:</p>
+      <ul>
+        <li><strong>Host access to WhatsApp Web</strong> — to blur content on that site only</li>
+        <li><strong>storage</strong> — to save your blur preferences locally</li>
+        <li><strong>activeTab</strong> — to update blur on the current tab when you change settings</li>
+      </ul>
+      <p>No other permissions are requested.</p>
 
-      <section>
-        <h2>Children’s privacy</h2>
-        <p>The extension is not directed at children under 13. We do not knowingly collect any personal information from children.</p>
-      </section>
+      <h2>7. Third parties</h2>
+      <p>
+        SafeWAChat does not integrate advertising networks, analytics services, or other third-party
+        trackers. We do not sell, rent, or transfer user data to third parties.
+      </p>
+      <p>
+        WhatsApp Web is operated by Meta Platforms, Inc. Your use of WhatsApp is governed by Meta’s
+        own terms and privacy policy. SafeWAChat is an independent, unofficial extension and is not
+        affiliated with, endorsed by, or sponsored by WhatsApp or Meta.
+      </p>
 
-      <section>
-        <h2>Changes</h2>
-        <p>If this policy changes, we will update the date at the top of this page. Continued use of the extension after changes means you accept the updated policy.</p>
-      </section>
+      <h2>8. Children’s privacy</h2>
+      <p>
+        The Extension is not directed at children under 13. We do not knowingly collect personal
+        information from children. If you believe a child has provided personal information through
+        the Extension, please contact us so we can help address the situation.
+      </p>
 
-      <section>
-        <h2>Contact</h2>
-        <p>Questions about privacy? See the <a href="contact.html">Contact</a> page or open an issue on <a href="https://github.com/zuhaibbutt786/whatsapp-web-privacy-extension" target="_blank" rel="noopener">GitHub</a>.</p>
-      </section>
+      <h2>9. Data security</h2>
+      <p>
+        Because SafeWAChat does not transmit your message content or personal data to external servers,
+        the primary security boundary is your own device and browser. We recommend keeping your browser
+        and operating system up to date and using device-level protections appropriate to your needs.
+      </p>
+
+      <h2>10. International users</h2>
+      <p>
+        The Extension is designed to function without collecting personal data, regardless of where
+        you are located. Local settings remain under the control of your browser and device.
+      </p>
+
+      <h2>11. Changes to this policy</h2>
+      <p>
+        We may update this Privacy Policy from time to time. The “Last updated” date at the top of
+        this page will reflect the latest revision. Continued use of the Extension after changes
+        constitutes acceptance of the updated policy.
+      </p>
+
+      <h2>12. Contact</h2>
+      <p>
+        If you have questions about this Privacy Policy or SafeWAChat, please contact:
+      </p>
+      <ul>
+        <li>Email: <a href="mailto:zuhaibbutt3@gmail.com">zuhaibbutt3@gmail.com</a></li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/zuhaib-hussain-butt-6628141a4" target="_blank" rel="noopener">Zuhaib Hussain Butt</a></li>
+      </ul>
+
+      <p class="muted" style="margin-top:32px;">
+        © 2026 SafeWAChat · Zuhaib Hussain Butt · Unofficial extension, not affiliated with WhatsApp or Meta.
+      </p>
     </div>
   </main>
 
-  <footer class="site-footer">
+  <footer class="footer">
     <div class="container footer-inner">
-      <p>© 2026 SafeWAChat. Built for privacy.</p>
-      <div class="footer-links">
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="contact.html">Contact</a>
-        <a href="https://github.com/zuhaibbutt786/whatsapp-web-privacy-extension" target="_blank" rel="noopener">GitHub</a>
+      <div class="brand">
+        <img src="assets/icon.svg" alt="" width="28" height="28" />
+        <span>SafeWAChat</span>
       </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <p class="copy">© 2026 SafeWAChat</p>
     </div>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
