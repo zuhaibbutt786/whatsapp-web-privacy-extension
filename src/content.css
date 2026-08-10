@@ -1,0 +1,120 @@
+/* Privacy Extension for WhatsApp Web - Content Styles */
+
+:root {
+  --privacy-blur-amount: 8px;
+  --privacy-pixel-size: 8px;
+  --privacy-solid-color: rgba(30, 30, 30, 0.92);
+}
+
+/* ===== Base blur styles ===== */
+.privacy-blur-gaussian {
+  filter: blur(var(--privacy-blur-amount)) !important;
+  transition: filter 0.18s ease !important;
+}
+
+.privacy-blur-pixelate {
+  /* Approximate pixelation using contrast + blur + scale trick */
+  filter: contrast(1.4) blur(var(--privacy-pixel-size)) !important;
+  image-rendering: pixelated !important;
+  transition: filter 0.18s ease !important;
+}
+
+.privacy-blur-solid {
+  position: relative !important;
+}
+
+.privacy-blur-solid::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background: var(--privacy-solid-color) !important;
+  border-radius: inherit !important;
+  z-index: 5 !important;
+  pointer-events: none !important;
+  transition: opacity 0.18s ease !important;
+}
+
+/* Hover / focus reveal */
+.privacy-blur-gaussian:hover,
+.privacy-blur-gaussian.privacy-revealed,
+.privacy-blur-pixelate:hover,
+.privacy-blur-pixelate.privacy-revealed {
+  filter: none !important;
+}
+
+.privacy-blur-solid:hover::after,
+.privacy-blur-solid.privacy-revealed::after {
+  opacity: 0 !important;
+}
+
+/* ===== Targeted elements ===== */
+
+/* Chat messages (conversation panel) */
+.privacy-blur-messages .message-in,
+.privacy-blur-messages .message-out,
+.privacy-blur-messages [data-testid="msg-container"],
+.privacy-blur-messages .copyable-text,
+.privacy-blur-messages .selectable-text {
+  /* applied dynamically via class on parent */
+}
+
+/* Left sidebar previews */
+.privacy-blur-previews [data-testid="cell-frame-container"] span[title],
+.privacy-blur-previews [data-testid="cell-frame-primary-text"],
+.privacy-blur-previews [data-testid="last-msg-status"] + span,
+.privacy-blur-previews .x1iyjqo2 {
+  /* handled by JS adding blur class */
+}
+
+/* Media */
+.privacy-blur-media img,
+.privacy-blur-media video,
+.privacy-blur-media [data-testid="image-thumb"],
+.privacy-blur-media [data-testid="video-content"],
+.privacy-blur-media [data-testid="sticker"],
+.privacy-blur-media .image-thumb,
+.privacy-blur-media canvas {
+  /* JS adds the blur class */
+}
+
+/* Profile pictures */
+.privacy-blur-profiles img[data-testid="avatar"],
+.privacy-blur-profiles [data-testid="default-user"],
+.privacy-blur-profiles header img,
+.privacy-blur-profiles [role="img"] img {
+  /* JS adds the blur class */
+}
+
+/* Incognito extras */
+.privacy-incognito [data-testid="icon-unread-count"],
+.privacy-incognito [data-testid="icon-unread-mentions"],
+.privacy-incognito span[aria-label*="unread"],
+.privacy-incognito .x1rg5ohu {
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* Screen-share protection overlay */
+#privacy-screen-share-overlay {
+  position: fixed !important;
+  inset: 0 !important;
+  background: rgba(20, 20, 20, 0.97) !important;
+  z-index: 999999 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #fff !important;
+  font-family: system-ui, -apple-system, sans-serif !important;
+  font-size: 18px !important;
+  text-align: center !important;
+  pointer-events: none !important;
+}
+
+#privacy-screen-share-overlay.hidden {
+  display: none !important;
+}
+
+/* Utility */
+.privacy-no-transition {
+  transition: none !important;
+}
