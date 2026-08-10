@@ -1,4 +1,6 @@
-# Privacy Extension for WhatsApp™ Web
+# SafeWAChat
+
+**SafeWAChat** – Privacy for WhatsApp Web
 
 > Blurs your messages and content on WhatsApp Web until you hover over them. Built for privacy in public spaces, offices, cafés, and screen-sharing situations.
 
@@ -38,7 +40,7 @@
 2. Open Chrome / Edge / Brave → go to `chrome://extensions`
 3. Enable **Developer mode** (top-right toggle)
 4. Click **Load unpacked** and select this project folder
-5. Open [web.whatsapp.com](https://web.whatsapp.com) — the extension activates automatically
+5. Open [web.whatsapp.com](https://web.whatsapp.com) — SafeWAChat activates automatically
 
 ## Static website
 
@@ -58,14 +60,14 @@ To publish it for free:
 
 ## Usage
 
-1. Click the extension icon to open the settings popup
+1. Click the SafeWAChat icon to open the settings popup
 2. Toggle the features you want → click **Save Settings**
 3. Hover any blurred element to reveal it temporarily
 4. Press **Alt + X** anytime to instantly enable/disable all effects
 
 ## Privacy Promise
 
-This extension:
+SafeWAChat:
 - Does **not** collect any information about you or your messages
 - Does **not** send data to any external server
 - Only uses `chrome.storage.sync` to save your preferences
@@ -104,4 +106,4 @@ MIT © 2026 Zuhaib Hussain Butt
 
 ---
 
-**Disclaimer**: This is an unofficial extension and is not affiliated with, endorsed by, or sponsored by WhatsApp or Meta.
+**Disclaimer**: SafeWAChat is an unofficial extension and is not affiliated with, endorsed by, or sponsored by WhatsApp or Meta.
