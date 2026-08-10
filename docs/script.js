@@ -1,26 +1,32 @@
 // Simple interactions for the landing page
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Reveal blurred mock messages on hover of the chat panel
-  const panel = document.querySelector("#chat-mock");
-  if (panel) {
-    panel.addEventListener("mouseenter", () => {
-      panel.querySelectorAll(".blur-demo").forEach((el) => el.classList.add("revealed"));
-    });
-    panel.addEventListener("mouseleave", () => {
-      panel.querySelectorAll(".blur-demo").forEach((el) => el.classList.remove("revealed"));
-    });
-  }
-
-  // Smooth scroll for in-page anchors
-  document.querySelectorAll('a[href^="#"]').forEach((a) => {
-    a.addEventListener("click", (e) => {
-      const id = a.getAttribute("href").slice(1);
-      const target = document.getElementById(id);
+  // Smooth scroll for in-page links
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", (e) => {
+      const id = anchor.getAttribute("href");
+      if (!id || id === "#") return;
+      const target = document.querySelector(id);
       if (target) {
         e.preventDefault();
         target.scrollIntoView({ behavior: "smooth", block: "start" });
       }
     });
   });
+
+  // Year in footer
+  const yearEl = document.getElementById("year");
+  if (yearEl) {
+    yearEl.textContent = new Date().getFullYear();
+  }
+
+  // Mobile nav toggle (if present)
+  const toggle = document.querySelector(".nav-toggle");
+  const nav = document.querySelector(".nav-links");
+  if (toggle && nav) {
+    toggle.addEventListener("click", () => {
+      nav.classList.toggle("open");
+      toggle.setAttribute("aria-expanded", nav.classList.contains("open"));
+    });
+  }
 });
