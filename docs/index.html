@@ -6,16 +6,14 @@
   <title>Privacy Extension for WhatsApp Web – Blur messages until hover</title>
   <meta name="description" content="Chrome extension that blurs WhatsApp Web messages, media and profile pictures until you hover. Timed auto-blur, selective contacts, screen-share protection and more." />
   <meta name="theme-color" content="#00a884" />
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/icon128.png" />
-  <link rel="apple-touch-icon" href="assets/icon128.png" />
+  <link rel="icon" type="image/svg+xml" href="assets/icon.svg" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Nav -->
   <nav class="nav">
     <div class="container nav-inner">
       <a href="#" class="brand">
-        <img src="assets/icon128.png" alt="App icon" width="36" height="36" />
+        <img src="assets/icon.svg" alt="App icon" width="36" height="36" />
         <span>WhatsApp Privacy</span>
       </a>
       <div class="nav-links">
@@ -27,7 +25,6 @@
     </div>
   </nav>
 
-  <!-- Hero -->
   <header class="hero">
     <div class="container hero-inner">
       <div class="hero-text">
@@ -53,24 +50,15 @@
             <div class="mock-sidebar">
               <div class="mock-chat blurred">
                 <div class="avatar"></div>
-                <div class="lines">
-                  <div class="line w60"></div>
-                  <div class="line w80"></div>
-                </div>
+                <div class="lines"><div class="line w60"></div><div class="line w80"></div></div>
               </div>
               <div class="mock-chat">
                 <div class="avatar"></div>
-                <div class="lines">
-                  <div class="line w50"></div>
-                  <div class="line w70"></div>
-                </div>
+                <div class="lines"><div class="line w50"></div><div class="line w70"></div></div>
               </div>
               <div class="mock-chat blurred">
                 <div class="avatar"></div>
-                <div class="lines">
-                  <div class="line w65"></div>
-                  <div class="line w40"></div>
-                </div>
+                <div class="lines"><div class="line w65"></div><div class="line w40"></div></div>
               </div>
             </div>
             <div class="mock-chat-panel">
@@ -86,68 +74,28 @@
     </div>
   </header>
 
-  <!-- Features -->
   <section id="features" class="section">
     <div class="container">
       <h2 class="section-title">Everything you need for privacy</h2>
       <p class="section-sub">Fine-grained controls so you decide exactly what stays hidden.</p>
-
       <div class="grid features-grid">
-        <article class="card">
-          <div class="icon-wrap">💬</div>
-          <h3>Blur messages</h3>
-          <p>All messages in the open chat stay blurred until you hover over them.</p>
-        </article>
-        <article class="card">
-          <div class="icon-wrap">📋</div>
-          <h3>Preview blur</h3>
-          <p>Last-message previews in the left sidebar are hidden from prying eyes.</p>
-        </article>
-        <article class="card">
-          <div class="icon-wrap">🖼️</div>
-          <h3>Media protection</h3>
-          <p>Images, videos, stickers and other media are blurred separately from text.</p>
-        </article>
-        <article class="card">
-          <div class="icon-wrap">👤</div>
-          <h3>Profile pictures</h3>
-          <p>Avatars across the interface stay blurred for extra discretion.</p>
-        </article>
-        <article class="card">
-          <div class="icon-wrap">⏱️</div>
-          <h3>Timed Auto-Blur</h3>
-          <p>Content automatically re-blurs after a delay you choose when the cursor leaves.</p>
-        </article>
-        <article class="card">
-          <div class="icon-wrap">🎯</div>
-          <h3>Selective contacts</h3>
-          <p>Force-blur specific people/groups or mark trusted ones as never-blur.</p>
-        </article>
-        <article class="card">
-          <div class="icon-wrap">🖥️</div>
-          <h3>Screen-share mode</h3>
-          <p>Extra protection when the window loses focus or during presentations.</p>
-        </article>
-        <article class="card">
-          <div class="icon-wrap">🎨</div>
-          <h3>Blur styles</h3>
-          <p>Gaussian blur, pixelation-style or solid overlay — plus adjustable intensity.</p>
-        </article>
-        <article class="card">
-          <div class="icon-wrap">🕶️</div>
-          <h3>Incognito mode</h3>
-          <p>Stronger privacy that also hides unread badges and notification indicators.</p>
-        </article>
+        <article class="card"><div class="icon-wrap">💬</div><h3>Blur messages</h3><p>All messages in the open chat stay blurred until you hover over them.</p></article>
+        <article class="card"><div class="icon-wrap">📋</div><h3>Preview blur</h3><p>Last-message previews in the left sidebar are hidden from prying eyes.</p></article>
+        <article class="card"><div class="icon-wrap">🖼️</div><h3>Media protection</h3><p>Images, videos, stickers and other media are blurred separately from text.</p></article>
+        <article class="card"><div class="icon-wrap">👤</div><h3>Profile pictures</h3><p>Avatars across the interface stay blurred for extra discretion.</p></article>
+        <article class="card"><div class="icon-wrap">⏱️</div><h3>Timed Auto-Blur</h3><p>Content automatically re-blurs after a delay you choose when the cursor leaves.</p></article>
+        <article class="card"><div class="icon-wrap">🎯</div><h3>Selective contacts</h3><p>Force-blur specific people/groups or mark trusted ones as never-blur.</p></article>
+        <article class="card"><div class="icon-wrap">🖥️</div><h3>Screen-share mode</h3><p>Extra protection when the window loses focus or during presentations.</p></article>
+        <article class="card"><div class="icon-wrap">🎨</div><h3>Blur styles</h3><p>Gaussian blur, pixelation-style or solid overlay — plus adjustable intensity.</p></article>
+        <article class="card"><div class="icon-wrap">🕶️</div><h3>Incognito mode</h3><p>Stronger privacy that also hides unread badges and notification indicators.</p></article>
       </div>
     </div>
   </section>
 
-  <!-- Install -->
   <section id="install" class="section section-alt">
     <div class="container narrow">
       <h2 class="section-title">Install in under a minute</h2>
       <p class="section-sub">Developer mode — no Chrome Web Store required.</p>
-
       <ol class="steps">
         <li>
           <span class="step-num">1</span>
@@ -185,7 +133,6 @@
           </div>
         </li>
       </ol>
-
       <div class="shortcut-box">
         <span class="kbd">Alt</span> + <span class="kbd">X</span>
         <span>Quick toggle privacy on / off anytime</span>
@@ -193,35 +140,21 @@
     </div>
   </section>
 
-  <!-- Privacy -->
   <section id="privacy" class="section">
     <div class="container narrow">
       <h2 class="section-title">Built for privacy</h2>
       <div class="privacy-grid">
-        <div class="privacy-item">
-          <h3>No data collection</h3>
-          <p>The extension never reads or stores the content of your messages.</p>
-        </div>
-        <div class="privacy-item">
-          <h3>No external servers</h3>
-          <p>Zero network requests. Everything runs locally in your browser.</p>
-        </div>
-        <div class="privacy-item">
-          <h3>Local settings only</h3>
-          <p>Preferences are saved with <code>chrome.storage.sync</code> — nothing leaves your devices.</p>
-        </div>
-        <div class="privacy-item">
-          <h3>Open source</h3>
-          <p>Full source code is public on GitHub. Audit it, fork it, improve it.</p>
-        </div>
+        <div class="privacy-item"><h3>No data collection</h3><p>The extension never reads or stores the content of your messages.</p></div>
+        <div class="privacy-item"><h3>No external servers</h3><p>Zero network requests. Everything runs locally in your browser.</p></div>
+        <div class="privacy-item"><h3>Local settings only</h3><p>Preferences are saved with <code>chrome.storage.sync</code> — nothing leaves your devices.</p></div>
+        <div class="privacy-item"><h3>Open source</h3><p>Full source code is public on GitHub. Audit it, fork it, improve it.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
   <section class="cta">
     <div class="container">
-      <img src="assets/icon128.png" alt="" width="64" height="64" class="cta-icon" />
+      <img src="assets/icon.svg" alt="" width="64" height="64" class="cta-icon" />
       <h2>Ready for private WhatsApp Web?</h2>
       <p>Free, open source, and takes less than a minute to install.</p>
       <div class="hero-actions">
@@ -234,12 +167,10 @@
   <footer class="footer">
     <div class="container footer-inner">
       <div class="brand">
-        <img src="assets/icon128.png" alt="" width="28" height="28" />
+        <img src="assets/icon.svg" alt="" width="28" height="28" />
         <span>WhatsApp Privacy</span>
       </div>
-      <p class="disclaimer">
-        Unofficial extension · Not affiliated with WhatsApp or Meta · MIT License
-      </p>
+      <p class="disclaimer">Unofficial extension · Not affiliated with WhatsApp or Meta · MIT License</p>
       <p class="copy">© 2026 · Open source</p>
     </div>
   </footer>
