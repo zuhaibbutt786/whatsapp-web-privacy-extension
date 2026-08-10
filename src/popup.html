@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WhatsApp Web Privacy</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="header">
+    <div class="logo">🔒</div>
+    <div>
+      <h1>WhatsApp Privacy</h1>
+      <p class="subtitle">Hover to reveal • Alt+X to toggle</p>
+    </div>
+    <label class="switch" title="Enable / Disable">
+      <input type="checkbox" id="enabled" />
+      <span class="slider"></span>
+    </label>
+  </div>
+
+  <div class="section">
+    <h2>Blur Targets</h2>
+    <label class="row">
+      <span>Messages in chat</span>
+      <input type="checkbox" id="blurMessages" />
+    </label>
+    <label class="row">
+      <span>Last message previews</span>
+      <input type="checkbox" id="blurPreviews" />
+    </label>
+    <label class="row">
+      <span>Media (images, videos, stickers)</span>
+      <input type="checkbox" id="blurMedia" />
+    </label>
+    <label class="row">
+      <span>Profile pictures</span>
+      <input type="checkbox" id="blurProfilePics" />
+    </label>
+  </div>
+
+  <div class="section">
+    <h2>Behavior</h2>
+    <label class="row">
+      <span>Timed Auto-Blur</span>
+      <input type="checkbox" id="timedAutoBlur" />
+    </label>
+    <label class="row">
+      <span>Auto-blur delay (seconds)</span>
+      <input type="number" id="autoBlurDelay" min="1" max="30" value="3" class="num" />
+    </label>
+    <label class="row">
+      <span>Screen-Share Protection</span>
+      <input type="checkbox" id="screenShareProtection" />
+    </label>
+    <label class="row">
+      <span>Incognito Session Mode</span>
+      <input type="checkbox" id="incognitoMode" />
+    </label>
+    <label class="row">
+      <span>Hide unread badges</span>
+      <input type="checkbox" id="hideBadges" />
+    </label>
+  </div>
+
+  <div class="section">
+    <h2>Blur Style</h2>
+    <div class="style-options">
+      <label><input type="radio" name="blurStyle" value="gaussian" /> Gaussian</label>
+      <label><input type="radio" name="blurStyle" value="pixelate" /> Pixelate</label>
+      <label><input type="radio" name="blurStyle" value="solid" /> Solid</label>
+    </div>
+    <label class="row">
+      <span>Intensity</span>
+      <input type="range" id="blurIntensity" min="2" max="20" value="8" />
+      <span id="intensityValue">8px</span>
+    </label>
+  </div>
+
+  <div class="section">
+    <h2>Selective Contacts</h2>
+    <p class="hint">Comma-separated names. Selective = always blur these. Never = never blur these.</p>
+    <label class="row column">
+      <span>Always blur (selective)</span>
+      <input type="text" id="selectiveContacts" placeholder="e.g. Boss, Family Group" />
+    </label>
+    <label class="row column">
+      <span>Never blur</span>
+      <input type="text" id="neverBlurContacts" placeholder="e.g. Wife, Best Friend" />
+    </label>
+  </div>
+
+  <div class="footer">
+    <button id="saveBtn" class="primary">Save Settings</button>
+    <p class="status" id="status"></p>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
