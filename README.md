@@ -6,7 +6,8 @@
 ![Manifest](https://img.shields.io/badge/manifest-v3-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
-**Live repo:** https://github.com/zuhaibbutt786/whatsapp-web-privacy-extension
+**Repository:** https://github.com/zuhaibbutt786/whatsapp-web-privacy-extension  
+**Landing page:** Enable GitHub Pages on the `docs/` folder (Settings → Pages → Deploy from branch `main` / folder `/docs`)
 
 ## Features
 
@@ -39,7 +40,21 @@
 4. Click **Load unpacked** and select this project folder
 5. Open [web.whatsapp.com](https://web.whatsapp.com) — the extension activates automatically
 
-> **Icons note:** Placeholder icons are included. Replace the PNGs in the `icons/` folder with your own designs (16/32/48/128 px) anytime. The extension functions fully even with the current placeholders.
+## Static website
+
+A polished landing page lives in the `docs/` folder:
+
+- `docs/index.html` – full marketing page
+- `docs/styles.css` – dark theme styles
+- `docs/script.js` – hover interactions on the mock UI
+- `docs/assets/icon.svg` – app icon (SVG)
+
+To publish it for free:
+
+1. Go to the repo **Settings → Pages**
+2. Source: **Deploy from a branch**
+3. Branch: `main` · Folder: `/docs`
+4. Save — your site will be at `https://zuhaibbutt786.github.io/whatsapp-web-privacy-extension/`
 
 ## Usage
 
@@ -61,11 +76,16 @@ This extension:
 ```
 whatsapp-web-privacy-extension/
 ├── manifest.json
-├── icons/
+├── icons/                 # Extension icons (16–512 px)
+├── docs/                  # Static landing website
+│   ├── index.html
+│   ├── styles.css
+│   ├── script.js
+│   └── assets/
 ├── src/
-│   ├── background.js      # Service worker + shortcut handling
-│   ├── content.js         # Main blur logic + MutationObserver
-│   ├── content.css        # Blur styles & transitions
+│   ├── background.js
+│   ├── content.js
+│   ├── content.css
 │   ├── popup.html / .css / .js
 │   └── options.html
 ├── LICENSE
