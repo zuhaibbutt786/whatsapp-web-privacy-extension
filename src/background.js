@@ -1,4 +1,4 @@
-// Background service worker for Privacy Extension for WhatsApp Web
+// Background service worker for SafeWAChat
 
 chrome.runtime.onInstalled.addListener(() => {
   // Set default settings
