@@ -1,5 +1,5 @@
 /**
- * Privacy Extension for WhatsApp Web
+ * SafeWAChat
  * Content script – applies blur effects and manages all privacy features
  */
 
