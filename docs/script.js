@@ -2,34 +2,25 @@
 
 document.addEventListener("DOMContentLoaded", () => {
   // Reveal blurred mock messages on hover of the chat panel
-  const panel = document.querySelector(".mock-chat-panel");
+  const panel = document.querySelector("#chat-mock");
   if (panel) {
     panel.addEventListener("mouseenter", () => {
-      panel.querySelectorAll(".blurred").forEach((el) => {
-        el.style.filter = "none";
-        el.style.transition = "filter 0.25s ease";
-      });
+      panel.querySelectorAll(".blur-demo").forEach((el) => el.classList.add("revealed"));
     });
     panel.addEventListener("mouseleave", () => {
-      panel.querySelectorAll(".blurred").forEach((el) => {
-        el.style.filter = "";
-      });
+      panel.querySelectorAll(".blur-demo").forEach((el) => el.classList.remove("revealed"));
     });
   }
 
-  // Also reveal sidebar blurred items when hovering the whole mock
-  const mock = document.querySelector(".mock-window");
-  if (mock) {
-    mock.addEventListener("mouseenter", () => {
-      mock.querySelectorAll(".mock-sidebar .blurred").forEach((el) => {
-        el.style.filter = "none";
-        el.style.transition = "filter 0.25s ease";
-      });
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach((a) => {
+    a.addEventListener("click", (e) => {
+      const id = a.getAttribute("href").slice(1);
+      const target = document.getElementById(id);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
     });
-    mock.addEventListener("mouseleave", () => {
-      mock.querySelectorAll(".mock-sidebar .blurred").forEach((el) => {
-        el.style.filter = "";
-      });
-    });
-  }
+  });
 });
