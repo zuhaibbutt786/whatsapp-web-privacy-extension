@@ -48,12 +48,42 @@
 1. Click the extension icon to open the settings popup
 2. Toggle the features you want → click **Save Settings**
 3. Hover any blurred element to reveal it temporarily
-4. Use **Alt + X** for a quick global toggle
+4. Press **Alt + X** anytime to instantly enable/disable all effects
 
-## Privacy
+## Privacy Promise
 
-This extension runs entirely locally. It does **not** collect, store, or transmit any of your messages, contacts, or personal data. All settings are stored in Chrome’s local `storage.sync`.
+This extension:
+- Does **not** collect any information about you or your messages
+- Does **not** send data to any external server
+- Only uses `chrome.storage.sync` to save your preferences
+- Only runs on `https://web.whatsapp.com/*`
+
+## Project Structure
+
+```
+whatsapp-web-privacy-extension/
+├── manifest.json
+├── icons/
+├── src/
+│   ├── background.js      # Service worker + shortcut handling
+│   ├── content.js         # Main blur logic + MutationObserver
+│   ├── content.css        # Blur styles & transitions
+│   ├── popup.html / .css / .js
+│   └── options.html
+├── LICENSE
+└── README.md
+```
+
+## Development Notes
+
+WhatsApp Web frequently changes its DOM. The content script uses resilient `data-testid` selectors where possible and a `MutationObserver` + periodic refresh to keep blurs applied.
+
+If something stops working after a WhatsApp update, the most common fix is updating the selectors in `src/content.js`.
 
 ## License
 
-MIT – see [LICENSE](LICENSE)
+MIT © 2026 Zuhaib Hussain Butt
+
+---
+
+**Disclaimer**: This is an unofficial extension and is not affiliated with, endorsed by, or sponsored by WhatsApp or Meta.
